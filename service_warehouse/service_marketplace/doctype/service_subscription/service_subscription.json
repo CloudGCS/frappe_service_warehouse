@@ -1,0 +1,101 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{tenant}-{service_packet}",
+ "creation": "2024-03-25 15:47:17.656313",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "column_break2",
+  "tenant",
+  "section_break",
+  "service_packet",
+  "packet_status",
+  "column_break",
+  "latest_version",
+  "vps_version"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "tenant",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Tenant",
+   "options": "Tenant",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_packet",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Packet",
+   "options": "Service Packet",
+   "reqd": 1
+  },
+  {
+   "default": "Ready",
+   "fieldname": "packet_status",
+   "fieldtype": "Select",
+   "label": "Packet Status",
+   "options": "Ready\nUp-To-Date\nUpgrade Possible"
+  },
+  {
+   "fieldname": "vps_version",
+   "fieldtype": "Link",
+   "label": "VPS Version",
+   "options": "Service Packet Version"
+  },
+  {
+   "fieldname": "section_break",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "column_break2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "service_packet.release_version",
+   "fieldname": "latest_version",
+   "fieldtype": "Data",
+   "label": "Latest Version",
+   "read_only": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-28 14:26:41.943414",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Subscription",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

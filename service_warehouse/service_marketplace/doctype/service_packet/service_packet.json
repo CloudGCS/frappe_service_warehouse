@@ -1,0 +1,109 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{service_provider}-{code_name}",
+ "creation": "2024-03-25 15:50:11.558063",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "code_name",
+  "column_break",
+  "service_provider",
+  "release_version",
+  "section_break_bmba",
+  "subscriptions",
+  "latest_release",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "code_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Code Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Provider",
+   "options": "Service Provider",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "latest_release.version",
+   "fieldname": "release_version",
+   "fieldtype": "Data",
+   "label": "Release Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_bmba",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "subscriptions",
+   "fieldtype": "Table",
+   "label": "Subscriptions",
+   "options": "Service Packet Subscription",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "latest_release",
+   "fieldtype": "Link",
+   "label": "Latest Release",
+   "options": "Service Packet Version",
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Packet",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-28 14:01:13.442979",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Packet",
+ "naming_rule": "By fieldname",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

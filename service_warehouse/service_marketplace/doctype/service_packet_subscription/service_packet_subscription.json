@@ -1,0 +1,43 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-26 06:21:27.447087",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "subscriber",
+  "column_break",
+  "release_version"
+ ],
+ "fields": [
+  {
+   "fieldname": "subscriber",
+   "fieldtype": "Link",
+   "label": "Subscriber",
+   "options": "Service Subscription"
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "subscriber.vps_version",
+   "fieldname": "release_version",
+   "fieldtype": "Data",
+   "label": "Release Version"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-28 14:25:03.106861",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Packet Subscription",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

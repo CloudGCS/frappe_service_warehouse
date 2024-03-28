@@ -1,0 +1,32 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "creation": "2024-03-26 06:45:00.404983",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "service_extension"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_extension",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Extension",
+   "options": "Service Extension"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2024-03-27 06:00:23.641850",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Packet Extension",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,112 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{service_provider}-{extension_type}-{library_name}-v{major}.{minor}",
+ "creation": "2024-03-26 06:35:20.181131",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "title",
+  "library_name",
+  "service_provider",
+  "extension_type",
+  "column_break",
+  "major",
+  "minor",
+  "file",
+  "version"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "fieldname": "library_name",
+   "fieldtype": "Data",
+   "label": "Library Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Service Provider",
+   "options": "Service Provider",
+   "read_only": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "extension_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Extension Type",
+   "options": "Service Extension Type",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "major",
+   "fieldtype": "Int",
+   "label": "Major",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "minor",
+   "fieldtype": "Int",
+   "label": "Minor",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "file",
+   "fieldtype": "Attach",
+   "in_list_view": 1,
+   "label": "File"
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "is_virtual": 1,
+   "label": "Version",
+   "options": "f\"v{doc.major}.{doc.minor}\"",
+   "read_only": 1,
+   "unique": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2024-03-27 05:59:58.033209",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Extension",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}

@@ -1,0 +1,107 @@
+{
+ "actions": [],
+ "allow_rename": 1,
+ "autoname": "format:{service_packet}-v{major}.{minor}",
+ "creation": "2024-03-26 06:30:54.511511",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "service_packet",
+  "version",
+  "major",
+  "minor",
+  "column_break",
+  "extensions",
+  "service_provider",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "service_packet",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Packet",
+   "options": "Service Packet",
+   "reqd": 1,
+   "search_index": 1
+  },
+  {
+   "fieldname": "version",
+   "fieldtype": "Data",
+   "label": "Version",
+   "read_only": 1,
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "major",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Major",
+   "reqd": 1
+  },
+  {
+   "fieldname": "minor",
+   "fieldtype": "Int",
+   "in_list_view": 1,
+   "label": "Minor",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "extensions",
+   "fieldtype": "Table MultiSelect",
+   "label": "Extensions",
+   "options": "Service Packet Extension",
+   "reqd": 1
+  },
+  {
+   "fieldname": "service_provider",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Service Provider",
+   "options": "Service Provider",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Service Packet Version",
+   "print_hide": 1,
+   "read_only": 1,
+   "search_index": 1
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2024-03-27 05:59:43.359040",
+ "modified_by": "Administrator",
+ "module": "Service Marketplace",
+ "name": "Service Packet Version",
+ "naming_rule": "Expression",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "states": []
+}
