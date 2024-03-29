@@ -8,12 +8,11 @@
  "field_order": [
   "title",
   "code_name",
+  "latest_release",
   "column_break",
   "service_provider",
-  "release_version",
   "section_break_bmba",
   "subscriptions",
-  "latest_release",
   "amended_from"
  ],
  "fields": [
@@ -44,13 +43,6 @@
    "read_only": 1
   },
   {
-   "fetch_from": "latest_release.version",
-   "fieldname": "release_version",
-   "fieldtype": "Data",
-   "label": "Release Version",
-   "read_only": 1
-  },
-  {
    "fieldname": "section_break_bmba",
    "fieldtype": "Section Break"
   },
@@ -59,12 +51,12 @@
    "fieldtype": "Table",
    "label": "Subscriptions",
    "options": "Service Packet Subscription",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "latest_release",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Latest Release",
    "options": "Service Packet Version",
    "read_only": 1
@@ -83,7 +75,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-28 14:01:13.442979",
+ "modified": "2024-03-29 14:20:21.298428",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",
@@ -91,6 +83,8 @@
  "owner": "Administrator",
  "permissions": [
   {
+   "amend": 1,
+   "cancel": 1,
    "create": 1,
    "delete": 1,
    "email": 1,
@@ -100,6 +94,7 @@
    "report": 1,
    "role": "System Manager",
    "share": 1,
+   "submit": 1,
    "write": 1
   }
  ],

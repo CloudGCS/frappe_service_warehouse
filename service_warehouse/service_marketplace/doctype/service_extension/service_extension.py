@@ -1,10 +1,11 @@
 # Copyright (c) 2024, a-techsyn and contributors
 # For license information, please see license.txt
 
-from service_warehouse.service_warehouse.doctype.tenant.tenant import get_session_tenant
+
 import frappe
 from frappe.model.document import Document
 
+from service_warehouse.service_warehouse.doctype.tenant.tenant import get_session_tenant
 
 class ServiceExtension(Document):
 	def before_insert(self):

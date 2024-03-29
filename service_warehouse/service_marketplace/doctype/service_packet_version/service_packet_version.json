@@ -7,18 +7,17 @@
  "engine": "InnoDB",
  "field_order": [
   "service_packet",
-  "version",
   "major",
   "minor",
   "column_break",
   "extensions",
-  "service_provider",
+  "version",
   "amended_from"
  ],
  "fields": [
   {
    "fieldname": "service_packet",
-   "fieldtype": "Data",
+   "fieldtype": "Link",
    "in_list_view": 1,
    "label": "Service Packet",
    "options": "Service Packet",
@@ -28,22 +27,21 @@
   {
    "fieldname": "version",
    "fieldtype": "Data",
+   "is_virtual": 1,
    "label": "Version",
+   "options": "f\"v{doc.major}.{doc.minor}\"",
    "read_only": 1,
-   "reqd": 1,
    "unique": 1
   },
   {
    "fieldname": "major",
    "fieldtype": "Int",
-   "in_list_view": 1,
    "label": "Major",
    "reqd": 1
   },
   {
    "fieldname": "minor",
    "fieldtype": "Int",
-   "in_list_view": 1,
    "label": "Minor",
    "reqd": 1
   },
@@ -56,15 +54,6 @@
    "fieldtype": "Table MultiSelect",
    "label": "Extensions",
    "options": "Service Packet Extension",
-   "reqd": 1
-  },
-  {
-   "fieldname": "service_provider",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Service Provider",
-   "options": "Service Provider",
-   "read_only": 1,
    "reqd": 1
   },
   {
@@ -81,7 +70,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-27 05:59:43.359040",
+ "modified": "2024-03-29 17:06:09.775083",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet Version",
@@ -90,13 +79,26 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
    "read": 1,
    "report": 1,
    "role": "System Manager",
+   "select": 1,
+   "share": 1
+  },
+  {
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "if_owner": 1,
+   "permlevel": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "select": 1,
    "share": 1,
    "write": 1
   }
