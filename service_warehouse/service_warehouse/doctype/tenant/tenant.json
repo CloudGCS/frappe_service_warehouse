@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "fieldname:tenant_code",
+ "autoname": "fieldname:tenant_name",
  "creation": "2024-03-25 15:21:33.044050",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -9,7 +9,8 @@
   "tenant_name",
   "tenant_code",
   "vps_url",
-  "service_provider"
+  "service_provider",
+  "provider_title"
  ],
  "fields": [
   {
@@ -46,11 +47,22 @@
    "options": "User",
    "reqd": 1,
    "unique": 1
+  },
+  {
+   "default": "define a provider",
+   "description": "Set the display name as service provider. This will create and associate a new Service Provider document",
+   "fieldname": "provider_title",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Provider Title",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-26 17:13:22.176348",
+ "modified": "2024-03-29 05:37:35.264859",
  "modified_by": "Administrator",
  "module": "Service_Warehouse",
  "name": "Tenant",
