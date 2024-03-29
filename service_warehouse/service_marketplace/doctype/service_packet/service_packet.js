@@ -7,5 +7,5 @@ frappe.ui.form.on("Service Packet", {
       frappe.throw("You have no version of this packet. Please add a version before submitting."  );
       return false;
     }
-  }
+  },
 });

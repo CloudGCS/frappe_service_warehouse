@@ -13,3 +13,7 @@ class ServicePacket(Document):
 			self.service_provider = tenant.service_provider
 		else:
 			frappe.throw("You are not a tenant")
+
+	def on_submit(self):
+		if not self.latest_release:
+				frappe.throw("Please set the latest release before submitting.")

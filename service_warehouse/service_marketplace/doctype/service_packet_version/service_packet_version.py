@@ -16,6 +16,11 @@ class ServicePacketVersion(Document):
 		else:
 			frappe.throw("You are not a tenant")
 
+	def on_submit(self):
+		service_packet = frappe.get_doc("Service Packet", self.service_packet)
+		service_packet.latest_release = self.name
+		service_packet.save()
+
 	def check_version(self):
 		# self has major and minor version first retrive all the versions with same library name
 		versions = frappe.get_all("Service Packet Version", filters={"service_packet": self.service_packet}, fields=["major", "minor"])
