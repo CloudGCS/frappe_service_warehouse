@@ -11,6 +11,7 @@
   "latest_release",
   "column_break",
   "service_provider",
+  "subscribe",
   "section_break_bmba",
   "subscriptions",
   "amended_from"
@@ -47,6 +48,7 @@
    "fieldtype": "Section Break"
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "subscriptions",
    "fieldtype": "Table",
    "label": "Subscriptions",
@@ -70,12 +72,17 @@
    "print_hide": 1,
    "read_only": 1,
    "search_index": 1
+  },
+  {
+   "fieldname": "subscribe",
+   "fieldtype": "Button",
+   "label": "Subscribe"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-29 18:36:51.000133",
+ "modified": "2024-03-30 03:22:58.720281",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",

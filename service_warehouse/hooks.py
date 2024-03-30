@@ -104,6 +104,7 @@ app_license = "mit"
 
 permission_query_conditions = {
 	"Service Packet": "service_warehouse.permissions.filter_service_packets",
+  "Service Subscription": "service_warehouse.permissions.filter_service_subscriptions",
 }
 #
 # has_permission = {
