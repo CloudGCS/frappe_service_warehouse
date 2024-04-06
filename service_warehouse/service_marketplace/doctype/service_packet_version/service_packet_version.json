@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "format:{service_packet}-v{major}.{minor}",
  "creation": "2024-03-26 06:30:54.511511",
  "doctype": "DocType",
@@ -37,12 +36,14 @@
    "fieldname": "major",
    "fieldtype": "Int",
    "label": "Major",
+   "non_negative": 1,
    "reqd": 1
   },
   {
    "fieldname": "minor",
    "fieldtype": "Int",
    "label": "Minor",
+   "non_negative": 1,
    "reqd": 1
   },
   {
@@ -70,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-29 18:27:10.255928",
+ "modified": "2024-04-06 02:22:52.245673",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet Version",

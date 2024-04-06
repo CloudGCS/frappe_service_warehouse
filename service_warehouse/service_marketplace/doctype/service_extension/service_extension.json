@@ -1,6 +1,5 @@
 {
  "actions": [],
- "allow_rename": 1,
  "autoname": "format:{service_provider}-{extension_type}-{library_name}-v{major}.{minor}",
  "creation": "2024-03-26 06:35:20.181131",
  "doctype": "DocType",
@@ -57,7 +56,9 @@
   {
    "fieldname": "major",
    "fieldtype": "Int",
+   "in_list_view": 1,
    "label": "Major",
+   "non_negative": 1,
    "reqd": 1,
    "set_only_once": 1
   },
@@ -65,6 +66,7 @@
    "fieldname": "minor",
    "fieldtype": "Int",
    "label": "Minor",
+   "non_negative": 1,
    "reqd": 1,
    "set_only_once": 1
   },
@@ -87,7 +89,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 06:10:55.461432",
+ "modified": "2024-04-06 01:28:41.815640",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Extension",
