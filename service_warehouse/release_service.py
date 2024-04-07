@@ -3,7 +3,7 @@ import json
 import frappe
 
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist()
 def check_update(*args, **kwargs):
 	tenant_code = kwargs.get('tenant_code')
 
@@ -27,7 +27,7 @@ def check_update(*args, **kwargs):
 	return packages
 
 
-@frappe.whitelist(allow_guest=True)
+@frappe.whitelist()
 def get_service_package(*args, **kwargs):
 	input = json.loads(kwargs.get('input'))
 
