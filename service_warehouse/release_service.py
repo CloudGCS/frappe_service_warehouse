@@ -40,8 +40,8 @@ def get_service_package(*args, **kwargs):
 									   "-".join(extension.get('name').split("-")[:-1]))
 		extension_model = {
 			"title": extension_doc.title,
-			"library_name": "",
-			"file_path": "",
+			"library_name": extension_doc.library_name,
+			"file_path": extension_doc.file,
 			"major": extension_doc.major,
 			"minor": extension_doc.minor,
 			"extension_type": {
@@ -63,3 +63,4 @@ def get_service_package(*args, **kwargs):
 		'extensions': extension_docs
 	}
 	print("input: ", input)
+
