@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "fieldname:tenant_name",
+ "autoname": "field:tenant_code",
  "creation": "2024-03-25 15:21:33.044050",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -62,11 +62,11 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-06 01:10:13.489860",
+ "modified": "2024-04-07 02:42:09.807377",
  "modified_by": "Administrator",
  "module": "Service Warehouse",
  "name": "Tenant",
- "naming_rule": "Expression (old style)",
+ "naming_rule": "By fieldname",
  "owner": "Administrator",
  "permissions": [
   {

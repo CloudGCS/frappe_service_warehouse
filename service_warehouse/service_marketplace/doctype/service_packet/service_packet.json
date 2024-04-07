@@ -56,6 +56,7 @@
    "read_only": 1
   },
   {
+   "allow_on_submit": 1,
    "fieldname": "latest_release",
    "fieldtype": "Link",
    "in_list_view": 1,
@@ -82,7 +83,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-03-30 03:22:58.720281",
+ "modified": "2024-04-07 05:50:26.463830",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",

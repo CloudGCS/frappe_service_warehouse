@@ -9,6 +9,7 @@
   "title",
   "column_break2",
   "tenant",
+  "tenant_code",
   "section_break",
   "service_packet",
   "packet_status",
@@ -72,11 +73,18 @@
    "fieldtype": "Data",
    "label": "Latest Version",
    "read_only": 1
+  },
+  {
+   "fetch_from": "tenant.tenant_code",
+   "fieldname": "tenant_code",
+   "fieldtype": "Data",
+   "hidden": 1,
+   "label": "Tenant Code"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-30 03:22:12.435379",
+ "modified": "2024-04-07 02:45:07.327589",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Subscription",
