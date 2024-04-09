@@ -10,13 +10,19 @@
   "service_provider",
   "extension_type",
   "column_break",
+  "file",
   "major",
   "minor",
-  "file",
-  "version"
+  "version",
+  "section_break_mqcj",
+  "description",
+  "plugin_info",
+  "is_backgroud_plugin",
+  "config"
  ],
  "fields": [
   {
+   "description": "Display Name",
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -85,11 +91,36 @@
    "options": "f\"v{doc.major}.{doc.minor}\"",
    "read_only": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "section_break_mqcj",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "config",
+   "fieldtype": "JSON",
+   "label": "Configuration"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_backgroud_plugin",
+   "fieldtype": "Check",
+   "label": "Backgroud Plugin"
+  },
+  {
+   "fieldname": "plugin_info",
+   "fieldtype": "Tab Break",
+   "label": "Plugin Info"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-06 01:28:41.815640",
+ "modified": "2024-04-09 13:09:24.935845",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Extension",
