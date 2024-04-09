@@ -1,6 +1,7 @@
 {
  "actions": [],
- "autoname": "field:tenant_code",
+ "allow_rename": 1,
+ "autoname": "field:tenant_name",
  "creation": "2024-03-25 15:21:33.044050",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -25,7 +26,8 @@
    "fieldtype": "Data",
    "in_list_view": 1,
    "label": "Tenant Name",
-   "reqd": 1
+   "reqd": 1,
+   "unique": 1
   },
   {
    "fieldname": "vps_url",
@@ -36,6 +38,7 @@
   {
    "fieldname": "service_provider",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "Service Provider",
    "options": "Service Provider",
    "read_only": 1
@@ -43,9 +46,11 @@
   {
    "fieldname": "user",
    "fieldtype": "Link",
+   "in_list_view": 1,
    "label": "User",
    "options": "User",
    "reqd": 1,
+   "set_only_once": 1,
    "unique": 1
   },
   {
@@ -62,7 +67,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-07 02:42:09.807377",
+ "modified": "2024-04-08 16:48:28.509852",
  "modified_by": "Administrator",
  "module": "Service Warehouse",
  "name": "Tenant",
@@ -71,7 +76,6 @@
  "permissions": [
   {
    "create": 1,
-   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,

@@ -20,7 +20,9 @@ class ServiceExtension(Document):
 
 	def check_version(self):
 		# self has major and minor version first retrive all the versions with same library name
-		versions = frappe.get_all("Service Extension", filters={"service_provider": self.service_provider, "library_name": self.library_name}, fields=["major", "minor"])
+		versions = frappe.get_all("Service Extension", 
+														filters={"service_provider": self.service_provider, "library_name": self.library_name, "extension_type": self.extension_type}, 
+														fields=["major", "minor"])
 		if not versions:
 			return True
 		# check if the version is greater

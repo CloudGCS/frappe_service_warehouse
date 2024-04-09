@@ -12,6 +12,8 @@ class ServicePacket(Document):
 		tenant = get_session_tenant()
 		if tenant:
 			self.service_provider = tenant.service_provider
+			if tenant.tenant_code == "HOST":
+				self.is_system_packet = 1
 		else:
 			frappe.throw("You are not a tenant")
 
