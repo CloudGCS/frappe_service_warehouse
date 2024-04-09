@@ -1,21 +1,16 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:{tenant}-{service_packet}",
+ "autoname": "format:{tenant}_{service_packet}",
  "creation": "2024-03-25 15:47:17.656313",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "title",
-  "column_break2",
   "tenant",
-  "tenant_code",
-  "section_break",
   "service_packet",
-  "packet_status",
-  "column_break",
-  "latest_version",
-  "vps_version"
+  "column_break2",
+  "provider",
+  "title",
+  "latest_version"
  ],
  "fields": [
   {
@@ -23,45 +18,25 @@
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Title",
-   "read_only": 1,
-   "reqd": 1
+   "read_only": 1
   },
   {
    "fieldname": "tenant",
    "fieldtype": "Link",
+   "in_list_view": 1,
+   "in_standard_filter": 1,
    "label": "Tenant",
    "options": "Tenant",
    "reqd": 1
   },
   {
-   "fieldname": "column_break",
-   "fieldtype": "Column Break"
-  },
-  {
    "fieldname": "service_packet",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Service Packet",
    "options": "Service Packet",
    "reqd": 1
-  },
-  {
-   "default": "Ready",
-   "fieldname": "packet_status",
-   "fieldtype": "Select",
-   "label": "Packet Status",
-   "options": "Ready\nUp-To-Date\nUpgrade Possible"
-  },
-  {
-   "fieldname": "vps_version",
-   "fieldtype": "Link",
-   "label": "VPS Version",
-   "options": "Service Packet Version"
-  },
-  {
-   "fieldname": "section_break",
-   "fieldtype": "Section Break"
   },
   {
    "fieldname": "column_break2",
@@ -71,20 +46,22 @@
    "fetch_from": "service_packet.latest_release",
    "fieldname": "latest_version",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Latest Version",
    "read_only": 1
   },
   {
-   "fetch_from": "tenant.tenant_code",
-   "fieldname": "tenant_code",
+   "fetch_from": "service_packet.service_provider",
+   "fieldname": "provider",
    "fieldtype": "Data",
-   "hidden": 1,
-   "label": "Tenant Code"
+   "in_list_view": 1,
+   "in_standard_filter": 1,
+   "label": "Provider"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-07 02:45:07.327589",
+ "modified": "2024-04-10 01:24:19.732949",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Subscription",

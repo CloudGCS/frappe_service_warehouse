@@ -8,7 +8,6 @@
  "field_order": [
   "subscriber",
   "column_break",
-  "release_version",
   "tenant"
  ],
  "fields": [
@@ -26,13 +25,6 @@
    "fieldtype": "Column Break"
   },
   {
-   "fetch_from": "subscriber.vps_version",
-   "fieldname": "release_version",
-   "fieldtype": "Data",
-   "in_list_view": 1,
-   "label": "Version in Use"
-  },
-  {
    "fetch_from": "subscriber.tenant",
    "fieldname": "tenant",
    "fieldtype": "Data",
@@ -42,7 +34,7 @@
  "index_web_pages_for_search": 1,
  "istable": 1,
  "links": [],
- "modified": "2024-03-30 03:26:17.667839",
+ "modified": "2024-04-10 01:07:26.234335",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet Subscription",

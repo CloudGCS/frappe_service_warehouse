@@ -1,20 +1,23 @@
 {
  "actions": [],
  "allow_rename": 1,
- "autoname": "field:tenant_name",
+ "autoname": "field:tenant_code",
  "creation": "2024-03-25 15:21:33.044050",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
   "user",
-  "tenant_name",
   "tenant_code",
+  "tenant_name",
   "vps_url",
+  "column_break_fpvg",
   "service_provider",
+  "provider_code",
   "provider_title"
  ],
  "fields": [
   {
+   "description": "Short code used as identifier",
    "fieldname": "tenant_code",
    "fieldtype": "Data",
    "label": "Tenant Code",
@@ -22,6 +25,7 @@
    "unique": 1
   },
   {
+   "description": "Display/Full name for Tenant",
    "fieldname": "tenant_name",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -38,7 +42,6 @@
   {
    "fieldname": "service_provider",
    "fieldtype": "Link",
-   "in_list_view": 1,
    "label": "Service Provider",
    "options": "Service Provider",
    "read_only": 1
@@ -55,7 +58,7 @@
   },
   {
    "default": "define a provider",
-   "description": "Set the display name as service provider. This will create and associate a new Service Provider document",
+   "description": "Set a display name for your identity as a service provider (you can use your tenant name as well)",
    "fieldname": "provider_title",
    "fieldtype": "Data",
    "hidden": 1,
@@ -63,11 +66,24 @@
    "reqd": 1,
    "set_only_once": 1,
    "unique": 1
+  },
+  {
+   "fieldname": "column_break_fpvg",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Set a short code for your extensions that you create as a service provider (you can use your tenant code) ",
+   "fieldname": "provider_code",
+   "fieldtype": "Data",
+   "label": "Provider Code",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-08 16:48:28.509852",
+ "modified": "2024-04-09 23:03:56.479339",
  "modified_by": "Administrator",
  "module": "Service Warehouse",
  "name": "Tenant",

@@ -5,6 +5,10 @@ def filter_service_packets(user):
   if not user:
     user = frappe.session.user
 
+  # todo replace with some well-defined role check
+  if user == "Administrator":
+    return None
+
   tenant = frappe.get_doc("Tenant", {"user": user})  
   if tenant:
     # packets that belong to user or submitted by others
@@ -15,6 +19,10 @@ def filter_service_packets(user):
 def filter_service_subscriptions(user):
   if not user:
     user = frappe.session.user
+
+  # todo replace with some well-defined role check
+  if user == "Administrator":
+    return None
 
   tenant = frappe.get_doc("Tenant", {"user": user})  
   if tenant:

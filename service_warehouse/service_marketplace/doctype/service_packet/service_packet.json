@@ -1,24 +1,25 @@
 {
  "actions": [],
- "allow_rename": 1,
- "autoname": "format:{service_provider}-{code_name}",
+ "autoname": "format:{service_provider}_{code_name}",
  "creation": "2024-03-25 15:50:11.558063",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
-  "title",
   "code_name",
+  "title",
   "latest_release",
   "column_break",
-  "service_provider",
   "subscribe",
+  "service_provider",
   "is_system_packet",
+  "description",
   "section_break_bmba",
   "subscriptions",
   "amended_from"
  ],
  "fields": [
   {
+   "description": "Display name",
    "fieldname": "title",
    "fieldtype": "Data",
    "in_list_view": 1,
@@ -26,11 +27,14 @@
    "reqd": 1
   },
   {
+   "description": "Short code as identifier for your packet",
    "fieldname": "code_name",
    "fieldtype": "Data",
    "in_list_view": 1,
-   "label": "Code Name",
-   "reqd": 1
+   "label": "Packet Code",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   },
   {
    "fieldname": "column_break",
@@ -85,12 +89,17 @@
    "fieldtype": "Check",
    "hidden": 1,
    "label": "Is System Packet"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text",
+   "label": "Description"
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-08 17:07:41.813397",
+ "modified": "2024-04-10 00:48:02.593087",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",

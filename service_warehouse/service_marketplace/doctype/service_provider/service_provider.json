@@ -1,6 +1,6 @@
 {
  "actions": [],
- "autoname": "field:title",
+ "autoname": "prompt",
  "creation": "2024-03-25 15:24:35.174450",
  "doctype": "DocType",
  "engine": "InnoDB",
@@ -11,19 +11,21 @@
   {
    "fieldname": "title",
    "fieldtype": "Data",
+   "in_list_view": 1,
    "label": "Title",
    "read_only": 1,
+   "reqd": 1,
    "unique": 1
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-03-29 05:23:37.669024",
+ "modified": "2024-04-09 23:08:33.049940",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Provider",
- "naming_rule": "By fieldname",
+ "naming_rule": "Set by user",
  "owner": "Administrator",
  "permissions": [
   {

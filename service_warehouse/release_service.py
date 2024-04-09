@@ -1,5 +1,4 @@
 import json
-
 import frappe
 
 
@@ -31,13 +30,13 @@ def check_update(*args, **kwargs):
 def get_service_package(*args, **kwargs):
 	input = json.loads(kwargs.get('input'))
 
-	service_package = frappe.get_doc("Service Packet", "-".join(input.get('name').split("-")[:-1]))
+	service_package = frappe.get_doc("Service Packet", "_".join(input.get('name').split("_")[:-1]))
 	service_package_version = frappe.get_doc("Service Packet Version", input.get('name'))
 	extensions = service_package_version.get("extensions")
 	extension_docs = []
 	for extension in extensions:
 		extension_doc = frappe.get_doc("Service Extension",
-									   "-".join(extension.get('name').split("-")[:-1]))
+									   "_".join(extension.get('name').split("_")[:-1]))
 		extension_model = {
 			"title": extension_doc.title,
 			"library_name": extension_doc.library_name,

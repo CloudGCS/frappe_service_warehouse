@@ -1,23 +1,24 @@
 {
  "actions": [],
- "autoname": "format:{service_provider}-{extension_type}-{library_name}-v{major}.{minor}",
+ "autoname": "format:{service_provider}_{extension_type}_{extension_code}_v{major}.{minor}",
  "creation": "2024-03-26 06:35:20.181131",
  "doctype": "DocType",
  "engine": "InnoDB",
  "field_order": [
+  "extension_code",
   "title",
-  "library_name",
   "service_provider",
-  "extension_type",
   "column_break",
-  "file",
+  "extension_type",
   "major",
   "minor",
   "version",
   "section_break_mqcj",
   "description",
   "plugin_info",
+  "library_name",
   "is_backgroud_plugin",
+  "file",
   "config"
  ],
  "fields": [
@@ -33,8 +34,7 @@
   {
    "fieldname": "library_name",
    "fieldtype": "Data",
-   "label": "Library Name",
-   "reqd": 1
+   "label": "Library Name"
   },
   {
    "fieldname": "service_provider",
@@ -116,11 +116,20 @@
    "fieldname": "plugin_info",
    "fieldtype": "Tab Break",
    "label": "Plugin Info"
+  },
+  {
+   "description": "Short code as identifier for your extension",
+   "fieldname": "extension_code",
+   "fieldtype": "Data",
+   "label": "Extension Code",
+   "reqd": 1,
+   "set_only_once": 1,
+   "unique": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-09 13:09:24.935845",
+ "modified": "2024-04-09 23:31:21.256790",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Extension",
