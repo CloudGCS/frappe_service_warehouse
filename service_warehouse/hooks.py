@@ -6,6 +6,15 @@ app_email = "contact@cloudgcs.com"
 app_license = "mit"
 # required_apps = []
 
+
+fixtures = [
+  {"dt": "Service Extension Type", "filters": [["name", "in", ["PS Plugin", "MC Plugin", "Web Application", "Service Container"]]]},
+  {"dt": "User", "filters": [["username", "in", ["host"]]]},
+  {"dt": "Service Provider", "filters": [["name", "in", ["SYSTEM"]]]},
+  {"dt": "Tenant", "filters": [["name", "in", ["HOST"]]]},
+]
+
+
 # Includes in <head>
 # ------------------
 

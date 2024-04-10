@@ -18,10 +18,12 @@ class Tenant(Document):
 			frappe.throw(_(f"{field_name} cannot contain underscore for doc: {self.name}"))
 
 	def before_insert(self):
-		provider = frappe.new_doc("Service Provider")
-		provider.title = self.provider_title
-		provider.insert()
-		self.service_provider = provider.name
+		if not frappe.db.exists("Service Provider", self.provider_code):
+			provider = frappe.new_doc("Service Provider")
+			provider.name = self.provider_code
+			provider.title = self.provider_title
+			provider.insert()
+		self.service_provider = self.provider_code
 
 
 @frappe.whitelist()

@@ -10,11 +10,13 @@ frappe.ui.form.on("Service Packet", {
       method: "service_warehouse.service_warehouse.doctype.tenant.tenant.get_session_tenant",
       args: {}
     });
-    debugger
+    
     var tenant = response.message;
     subscription_possible = subscription_possible && tenant != null && tenant.service_provider != frm.doc.service_provider
     subscription_possible = subscription_possible && frm.doc.subscriptions.filter(sub => sub.tenant == tenant.name).length == 0
     frm.set_df_property('subscribe', 'hidden', !subscription_possible);
+
+    frm.set_df_property('is_system_packet', 'hidden', tenant == null || tenant.name == "HOST");
   },
   before_submit: function(frm) {
     if (frm.doc.latest_release == null) {

@@ -14,14 +14,13 @@
    "in_list_view": 1,
    "label": "Title",
    "read_only": 1,
-   "reqd": 1,
-   "unique": 1
+   "reqd": 1
   }
  ],
  "in_create": 1,
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-09 23:08:33.049940",
+ "modified": "2024-04-10 04:57:46.176148",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Provider",

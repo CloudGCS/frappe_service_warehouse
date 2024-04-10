@@ -9,7 +9,6 @@
   "user",
   "tenant_code",
   "tenant_name",
-  "vps_url",
   "column_break_fpvg",
   "service_provider",
   "provider_code",
@@ -31,12 +30,6 @@
    "in_list_view": 1,
    "label": "Tenant Name",
    "reqd": 1,
-   "unique": 1
-  },
-  {
-   "fieldname": "vps_url",
-   "fieldtype": "Data",
-   "label": "VPS Url",
    "unique": 1
   },
   {
@@ -83,7 +76,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-09 23:03:56.479339",
+ "modified": "2024-04-10 05:09:54.617717",
  "modified_by": "Administrator",
  "module": "Service Warehouse",
  "name": "Tenant",
@@ -92,6 +85,7 @@
  "permissions": [
   {
    "create": 1,
+   "delete": 1,
    "email": 1,
    "export": 1,
    "print": 1,
