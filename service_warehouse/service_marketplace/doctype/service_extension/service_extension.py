@@ -10,11 +10,8 @@ from service_warehouse.service_warehouse.doctype.tenant.tenant import get_sessio
 
 class ServiceExtension(Document):
 	def validate(self):
-		self.check_for_underscore("Name", self.name)
-		self.check_for_underscore("Extension Code", self.extension_name)
+		self.check_for_underscore("Extension Code", self.extension_code)
 
-	def before_rename(self, old_name, new_name, merge=False):
-		self.check_for_underscore("Name", new_name)
 
 	def check_for_underscore(self, field_name, value):
 		if "_" in value:
