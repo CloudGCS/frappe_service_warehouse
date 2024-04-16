@@ -1,0 +1,196 @@
+[
+    {
+     "amended_from": null,
+     "docstatus": 1,
+     "doctype": "Service Packet Version",
+     "extensions": [
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Map_v1.30"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_FlightPanel_v0.59"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_AircraftPicker_v1.9"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_MissionAPI_v7.16"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_PilotChat_v1.17"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_Switcher_v2.25"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_AircraftViewer_v1.16"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_BackgroundCommand_v1.8"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_MapEditor_v8.157"
+      },
+      {
+       "parent": "SYSTEM_Base_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_PS Plugin_Handover_v7.19"
+      }
+     ],
+     "major": 0,
+     "minor": 1,
+     "modified": "2024-04-16 08:36:01.841132",
+     "name": "SYSTEM_Base_v0.1",
+     "service_packet": "SYSTEM_Base",
+     "version": "v0.1"
+    },
+    {
+     "amended_from": null,
+     "docstatus": 1,
+     "doctype": "Service Packet Version",
+     "extensions": [
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Attitude_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_DataLink_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_ECT_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Fuel_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_GPS_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_IAT_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_LeftBattery_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_RPM_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_RightBattery_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_TravelHover_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_AltitudeGraph_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_DataTable_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Heading_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Variometer_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Power_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Viewer_v1.4"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_LED_v2.0"
+      },
+      {
+       "parent": "SYSTEM_Gauge_v0.1",
+       "parentfield": "extensions",
+       "parenttype": "Service Packet Version",
+       "service_extension": "SYSTEM_MC Plugin_Speed_v2.0"
+      }
+     ],
+     "major": 0,
+     "minor": 1,
+     "modified": "2024-04-16 10:02:02.880426",
+     "name": "SYSTEM_Gauge_v0.1",
+     "service_packet": "SYSTEM_Gauge",
+     "version": "v0.1"
+    }
+   ]

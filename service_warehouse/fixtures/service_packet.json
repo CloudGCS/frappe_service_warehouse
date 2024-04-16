@@ -1,0 +1,31 @@
+[
+    {
+     "_liked_by": "[]",
+     "amended_from": null,
+     "code_name": "Base",
+     "description": null,
+     "docstatus": 1,
+     "doctype": "Service Packet",
+     "is_system_packet": 1,
+     "latest_release": "SYSTEM_Base_v0.1",
+     "modified": "2024-04-16 10:01:57.393654",
+     "name": "SYSTEM_Base",
+     "service_provider": "SYSTEM",
+     "subscriptions": [],
+     "title": "Remote Piloting"
+    },
+    {
+     "amended_from": null,
+     "code_name": "Gauge",
+     "description": null,
+     "docstatus": 1,
+     "doctype": "Service Packet",
+     "is_system_packet": 1,
+     "latest_release": "SYSTEM_Gauge_v0.1",
+     "modified": "2024-04-16 10:01:27.716916",
+     "name": "SYSTEM_Gauge",
+     "service_provider": "SYSTEM",
+     "subscriptions": [],
+     "title": "Gauges"
+    }
+   ]

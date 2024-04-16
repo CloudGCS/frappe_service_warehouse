@@ -19,6 +19,9 @@ class ServiceExtension(Document):
 
 	
 	def before_insert(self):
+		user = frappe.session.user
+		if user == "Administrator" and self.service_provider == "SYSTEM":
+			return
 		tenant = get_session_tenant()
 		if not tenant:
 			frappe.throw("You are not a tenant")

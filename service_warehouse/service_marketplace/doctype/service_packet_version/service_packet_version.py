@@ -8,6 +8,9 @@ from service_warehouse.service_warehouse.doctype.tenant.tenant import get_sessio
 
 class ServicePacketVersion(Document):
 	def before_insert(self):
+		user = frappe.session.user
+		if user == "Administrator" :
+			return
 		tenant = get_session_tenant()
 		if tenant:
 			is_valid_version = self.check_version()
