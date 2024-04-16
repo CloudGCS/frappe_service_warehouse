@@ -17,7 +17,7 @@
   "description",
   "plugin_info",
   "library_name",
-  "is_backgroud_plugin",
+  "is_background_plugin",
   "file",
   "config"
  ],
@@ -104,12 +104,6 @@
    "label": "Description"
   },
   {
-   "default": "0",
-   "fieldname": "is_backgroud_plugin",
-   "fieldtype": "Check",
-   "label": "Backgroud Plugin"
-  },
-  {
    "fieldname": "plugin_info",
    "fieldtype": "Tab Break",
    "label": "Plugin Info"
@@ -122,11 +116,17 @@
    "reqd": 1,
    "set_only_once": 1,
    "unique": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_background_plugin",
+   "fieldtype": "Check",
+   "label": "Background Plugin"
   }
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-04-10 04:40:44.015339",
+ "modified": "2024-04-16 23:45:18.059508",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Extension",

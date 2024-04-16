@@ -4,6 +4,7 @@
 import json
 import frappe
 from frappe.model.document import Document
+from frappe import _
 
 from service_warehouse.service_warehouse.doctype.tenant.tenant import get_session_tenant
 

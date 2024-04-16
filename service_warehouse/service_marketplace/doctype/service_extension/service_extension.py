@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 
+import os
 import frappe
 from frappe.model.document import Document
 
@@ -21,6 +22,22 @@ class ServiceExtension(Document):
 	def before_insert(self):
 		user = frappe.session.user
 		if user == "Administrator" and self.service_provider == "SYSTEM":
+			if self.file:
+				file_name = self.file.split("/")[-1]
+				current_dir = os.getcwd()
+				file_path = f"{current_dir}/assets/service_warehouse/plugins/{file_name}"
+				file_content = frappe.read_file(file_path)
+				file_doc = frappe.get_doc({
+            "doctype": "File",
+            "file_name": file_name,
+            "attached_to_doctype": "Service Extension",
+            "attached_to_name": self.name,
+						"attached_to_field": "file",
+						"is_private": 1,
+            "content": file_content
+        })
+				# Insert the new File document
+				file_doc.insert(ignore_links=True)
 			return
 		tenant = get_session_tenant()
 		if not tenant:
