@@ -24,6 +24,10 @@ def check_update(tenant_code):
 		packages.append(package)
 	return packages
 
+def get_config_wout_format(config):
+		layout = json.loads(config)
+		config_string = json.dumps(layout)
+		return config_string
 
 @frappe.whitelist()
 def get_service_package(packet_release_version):
@@ -43,15 +47,23 @@ def get_service_package(packet_release_version):
 			extension_type_cache[extension_doc.extension_type] = frappe.get_doc("Service Extension Type", extension_doc.extension_type, fields=["name", "title"])
 		extension_type_doc = extension_type_cache[extension_doc.extension_type]
 		extension_model = {
+			"extension_code": extension_doc.extension_code,
 			"title": extension_doc.title,
-			"library_name": extension_doc.library_name,
-			"file_path": extension_doc.file,
+			"service_provider": {
+				"name": packet_service_provider.name,
+				"title": packet_service_provider.title
+			},
 			"major": extension_doc.major,
 			"minor": extension_doc.minor,
 			"extension_type": {
 				"name": extension_doc.extension_type,
 				"title": extension_type_doc.title
 			},
+			"description": extension_doc.description,
+			"library_name": extension_doc.library_name,
+			"is_background_plugin": extension_doc.is_background_plugin,
+			"file": extension_doc.file,
+			"config": json.loads(extension_doc.config) if extension_doc.config else {}
 		}
 		extension_docs.append(extension_model)
 
@@ -60,6 +72,8 @@ def get_service_package(packet_release_version):
 		'code_name': service_package.get('code_name'),
 		'major': service_package_version.get('major'),
 		'minor': service_package_version.get('minor'),
+		'is_system_packet': service_package.get('is_system_packet'),
+		'description': service_package.get('description'),
 		'service_provider': {
 			'name': service_package.get('service_provider'),
 			'title': packet_service_provider.title
