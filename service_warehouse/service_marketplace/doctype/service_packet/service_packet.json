@@ -8,11 +8,12 @@
   "code_name",
   "title",
   "latest_release",
+  "is_seed_data",
   "column_break",
-  "subscribe",
   "service_provider",
   "is_system_packet",
   "description",
+  "subscribe",
   "section_break_bmba",
   "subscriptions",
   "amended_from"
@@ -94,12 +95,20 @@
    "fieldname": "description",
    "fieldtype": "Text",
    "label": "Description"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_seed_data",
+   "fieldtype": "Check",
+   "hidden": 1,
+   "label": "Seed Data",
+   "read_only": 1
   }
  ],
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-16 10:04:29.640677",
+ "modified": "2024-04-21 01:07:01.128513",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",

@@ -21,7 +21,9 @@ class ServiceExtension(Document):
 	
 	def before_insert(self):
 		user = frappe.session.user
+		# todo: we need to make a better check for fixtures - this is a temporary fix
 		if user == "Administrator" and self.service_provider == "SYSTEM":
+			# todo: this will replace the file on every migrate operation - we need to make it better
 			if self.file:
 				file_name = self.file.split("/")[-1]
 				current_dir = os.getcwd()

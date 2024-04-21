@@ -3,6 +3,7 @@
 
 import frappe
 from frappe.model.document import Document
+from frappe import _
 
 
 class Tenant(Document):
@@ -25,6 +26,14 @@ class Tenant(Document):
 			provider.insert()
 		self.service_provider = self.provider_code
 
+	def after_insert(self):
+		if self.tenant_code != "HOST":
+			# get service packets with is_system_packet = 1
+			service_packets = frappe.get_all("Service Packet", filters={"is_system_packet": 1})
+			for packet in service_packets:
+				packet_doc = frappe.get_doc("Service Packet", packet.name)
+				packet_doc.subscribe(self)
+
 
 @frappe.whitelist()
 def get_session_tenant():
@@ -32,3 +41,6 @@ def get_session_tenant():
 		return frappe.get_doc("Tenant", {"user": frappe.session.user})
 	
 	return None
+
+def get_host_user():
+	return frappe.get_doc("Tenant", "HOST").user

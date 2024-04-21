@@ -71,7 +71,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-04-10 00:54:37.003439",
+ "modified": "2024-04-20 19:51:52.140296",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet Version",
@@ -83,6 +83,7 @@
    "email": 1,
    "export": 1,
    "print": 1,
+   "read": 1,
    "report": 1,
    "role": "System Manager",
    "share": 1
