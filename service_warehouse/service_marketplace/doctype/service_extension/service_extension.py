@@ -7,7 +7,7 @@ import frappe
 from frappe.model.document import Document
 
 from frappe import _
-from service_warehouse.service_warehouse.doctype.tenant.tenant import get_session_tenant
+from service_warehouse.service_warehouse.doctype.tenant.tenant import get_host_user, get_session_tenant
 
 class ServiceExtension(Document):
 	def validate(self):
@@ -50,6 +50,11 @@ class ServiceExtension(Document):
 
 		if not self.is_version_valid():
 			frappe.throw("Your version number should progress, can not be downgrading from the latest version created.")
+
+	def after_insert(self):
+		if self.owner == "Administrator" and self.service_provider == "SYSTEM":
+			self.owner = get_host_user()
+			frappe.db.set_value("Service Extension", self.name, "owner", get_host_user())
 
 	def is_version_valid(self):
 		# self has major and minor version first retrive all the versions with same library name

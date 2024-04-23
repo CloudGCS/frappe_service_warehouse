@@ -3,21 +3,18 @@
 
 frappe.ui.form.on("Service Packet", {
 	onload: async function(frm) {
-    var subscription_possible = frm.doc.docStatus != 1
-    subscription_possible = subscription_possible && frm.doc.service_provider != null
-
     const response = await frappe.call({
       method: "service_warehouse.service_warehouse.doctype.tenant.tenant.get_session_tenant",
       args: {}
     });
-    
-    var tenant = response.message;
-    subscription_possible = subscription_possible && tenant != null && tenant.service_provider != frm.doc.service_provider
-    subscription_possible = subscription_possible && frm.doc.subscriptions.filter(sub => sub.tenant == tenant.name).length == 0
-    frm.set_df_property('subscribe', 'hidden', !subscription_possible);
 
+    const tenant = response.message;
+    const isSubscribed = frm.doc.subscriptions.some(sub => sub.tenant == tenant.name);
+    const isSubscriptionPossible = frm.doc.docStatus != 1 && frm.doc.service_provider != null && tenant != null && !isSubscribed;
+
+    frm.set_df_property('subscribe', 'hidden', !isSubscriptionPossible);
     frm.set_df_property('is_system_packet', 'hidden', tenant == null || tenant.name == "HOST");
-  },
+},
   before_submit: function(frm) {
     if (frm.doc.latest_release == null) {
       frappe.throw("You have no version of this packet. Please add a version before submitting."  );
