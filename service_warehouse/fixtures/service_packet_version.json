@@ -8,13 +8,13 @@
        "parent": "SYSTEM_Base_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Map_v1.30"
+       "service_extension": "SYSTEM_PS Plugin_Map_v1.30"
       },
       {
        "parent": "SYSTEM_Base_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_FlightPanel_v0.59"
+       "service_extension": "SYSTEM_PS Plugin_FlightPanel_v0.59"
       },
       {
        "parent": "SYSTEM_Base_v0.1",
@@ -81,109 +81,109 @@
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Attitude_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Attitude_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_DataLink_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_DataLink_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_ECT_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_ECT_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Fuel_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Fuel_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_GPS_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_GPS_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_IAT_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_IAT_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_LeftBattery_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_LeftBattery_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_RPM_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_RPM_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_RightBattery_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_RightBattery_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_TravelHover_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_TravelHover_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_AltitudeGraph_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_AltitudeGraph_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_DataTable_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_DataTable_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Heading_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Heading_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Variometer_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Variometer_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Power_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Power_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Viewer_v1.4"
+       "service_extension": "SYSTEM_PS Plugin_Viewer_v1.4"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_LED_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_LED_v2.0"
       },
       {
        "parent": "SYSTEM_Gauge_v0.1",
        "parentfield": "extensions",
        "parenttype": "Service Packet Version",
-       "service_extension": "SYSTEM_MC Plugin_Speed_v2.0"
+       "service_extension": "SYSTEM_PS Plugin_Speed_v2.0"
       }
      ],
      "major": 0,
