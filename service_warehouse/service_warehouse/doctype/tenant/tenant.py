@@ -44,3 +44,15 @@ def get_session_tenant():
 
 def get_host_user():
 	return frappe.get_doc("Tenant", "HOST").user
+
+@frappe.whitelist()
+def check_tenant_subscription(packet_name):
+	tenant = get_session_tenant()
+	if tenant:
+		is_subscribed = frappe.db.exists("Service Subscription", {"tenant": tenant.name, "service_packet": packet_name})
+		return {
+			"tenant": tenant,
+			"is_subscribed": is_subscribed != None
+		}
+	
+	return None

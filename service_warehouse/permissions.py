@@ -27,8 +27,15 @@ def filter_service_subscriptions(user):
   tenant = frappe.get_doc("Tenant", {"user": user})  
   if tenant:
     name_of_tenant = tenant.name
-    # todo:  I should be able to see my subscriptions
-    return "(`tabService Subscription`.tenant = {name_of_tenant})".format(name_of_tenant=frappe.db.escape(name_of_tenant))
+    provider = tenant.service_provider
+    # I should be able to see my subscriptions and those subsriptions to my packets
+    return (
+      "(`tabService Subscription`.tenant = {name_of_tenant}) or "
+      "(`tabService Subscription`.provider = {provider})"
+    ).format(
+      name_of_tenant=frappe.db.escape(name_of_tenant), 
+      provider=frappe.db.escape(provider)
+    )
   else:
     return None 
      

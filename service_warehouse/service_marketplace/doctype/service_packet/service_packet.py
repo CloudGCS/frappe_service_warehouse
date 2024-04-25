@@ -36,23 +36,10 @@ class ServicePacket(Document):
 		if self.is_seed_data:
 			self.owner = get_host_user()
 			frappe.db.set_value("Service Packet", self.name, "owner", get_host_user())
-			# link to existing subscriptions
-			subscriptions = frappe.get_all("Service Subscription", filters={"service_packet": self.name})
-			for subscription in subscriptions:
-				self.create_packet_subscription(subscription)
 
 	def on_submit(self):
 		if not self.latest_release:
 				frappe.throw("Please set the latest release before submitting.")
-
-	def create_packet_subscription(self, service_subscription):
-		subscriber = frappe.new_doc("Service Packet Subscription")
-		subscriber.parent = self.name
-		subscriber.parenttype = "Service Packet"
-		subscriber.parentfield = "subscriptions"
-		subscriber.subscriber = service_subscription.name
-		subscriber.insert()
-		return subscriber
 
 	def subscribe(self, tenant):
 		
@@ -68,10 +55,6 @@ class ServicePacket(Document):
 		service_subscription.service_packet = self.name
 		service_subscription.tenant = tenant.name
 		service_subscription.insert(ignore_permissions=True)
-		subscriber = self.create_packet_subscription(service_subscription)
-		
-		self.append("subscriptions", subscriber)
-		self.save(ignore_permissions=True)
 		
 
 # this method should be called on DocType Service Packet only.

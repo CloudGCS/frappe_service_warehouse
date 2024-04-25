@@ -4,13 +4,17 @@
 frappe.ui.form.on("Service Packet", {
 	onload: async function(frm) {
     const response = await frappe.call({
-      method: "service_warehouse.service_warehouse.doctype.tenant.tenant.get_session_tenant",
-      args: {}
+      method: "service_warehouse.service_warehouse.doctype.tenant.tenant.check_tenant_subscription",
+      args: {packet_name: frm.doc.name}
     });
-
-    const tenant = response.message;
-    const isSubscribed = frm.doc.subscriptions.some(sub => sub.tenant == tenant.name);
-    const isSubscriptionPossible = frm.doc.docStatus != 1 && frm.doc.service_provider != null && tenant != null && !isSubscribed;
+    let isSubscriptionPossible = false;
+    let tenant = null;
+    if (response.message != null) {
+      debugger;
+      tenant = response.message.tenant  ;
+      const isSubscribed = response.message.is_subscribed;
+      isSubscriptionPossible = frm.doc.docStatus != 1 && frm.doc.service_provider != null && tenant != null && !isSubscribed;  
+    }
 
     frm.set_df_property('subscribe', 'hidden', !isSubscriptionPossible);
     frm.set_df_property('is_system_packet', 'hidden', tenant == null || tenant.name == "HOST");
