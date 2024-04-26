@@ -104,9 +104,14 @@
    "group": "Subscriptions",
    "link_doctype": "Service Subscription",
    "link_fieldname": "service_packet"
+  },
+  {
+   "group": "Packet Versions",
+   "link_doctype": "Service Packet Version",
+   "link_fieldname": "service_packet"
   }
  ],
- "modified": "2024-04-26 01:10:28.372111",
+ "modified": "2024-04-26 02:52:11.851554",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet",
