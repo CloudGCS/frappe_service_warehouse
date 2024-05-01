@@ -9,6 +9,24 @@ from frappe import _
 from service_warehouse.service_warehouse.doctype.tenant.tenant import get_host_user, get_session_tenant
 
 class ServicePacket(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+
+		amended_from: DF.Link | None
+		code_name: DF.Data
+		description: DF.Text | None
+		is_seed_data: DF.Check
+		is_system_packet: DF.Check
+		latest_release: DF.Link | None
+		service_provider: DF.Link | None
+		title: DF.Data
+	# end: auto-generated types
+
 	def validate(self):
 		self.check_for_underscore("Packet Code", self.code_name)
 
@@ -17,8 +35,6 @@ class ServicePacket(Document):
 			frappe.throw(_(f"{field_name} cannot contain underscore for doc: {self.name}"))
 
 	def before_insert(self):
-		user = frappe.session.user
-		# todo: we need to make a better check for fixtures - this is a temporary fix
 		if self.is_seed_data:
 			return
 		tenant = get_session_tenant()

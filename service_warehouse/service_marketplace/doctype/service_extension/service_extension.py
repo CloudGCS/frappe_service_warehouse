@@ -10,6 +10,29 @@ from frappe import _
 from service_warehouse.service_warehouse.doctype.tenant.tenant import get_host_user, get_session_tenant
 
 class ServiceExtension(Document):
+	# begin: auto-generated types
+	# This code is auto-generated. Do not modify anything in this block.
+
+	from typing import TYPE_CHECKING
+
+	if TYPE_CHECKING:
+		from frappe.types import DF
+
+		config: DF.JSON | None
+		description: DF.Text | None
+		extension_code: DF.Data
+		extension_type: DF.Link
+		file: DF.Attach | None
+		is_background_plugin: DF.Check
+		is_build_in: DF.Check
+		library_name: DF.Data
+		major: DF.Int
+		minor: DF.Int
+		service_provider: DF.Link
+		title: DF.Data
+		version: DF.Data | None
+	# end: auto-generated types
+
 	def validate(self):
 		self.check_for_underscore("Extension Code", self.extension_code)
 

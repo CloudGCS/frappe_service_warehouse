@@ -12,10 +12,21 @@ fixtures = [
   {"dt": "User", "filters": [["username", "in", ["host"]]]},
   {"dt": "Service Provider", "filters": [["name", "in", ["SYSTEM"]]]},
   {"dt": "Tenant", "filters": [["name", "in", ["HOST"]]]},
-  {"dt": "Service Packet", "filters": [["service_provider", "in", ["SYSTEM"]]]},
-  {"dt": "Service Packet Version", "filters": [["service_packet", "like", "%SYSTEM_%"]]},
-  {"dt": "Service Packet Extension", "filters": [["service_extension", "like", "%SYSTEM_%"]] },
-  {"dt": "Service Extension", "filters": [["service_provider", "in", ["SYSTEM"]]]}
+  {"dt": "Service Packet", "filters": [
+                                        ["service_provider", "in", ["SYSTEM"]],
+                                        ["is_seed_data", "=", 1],
+                                        ["docstatus", "=", 1]
+                                      ] },
+  {"dt": "Service Packet Version", "filters": [
+                                                ["service_packet", "like", "SYSTEM_%"],
+                                                ["is_seed_data", "=", 1],
+                                                ["docstatus", "=", 1]
+                                              ]},
+  {"dt": "Service Extension", "filters": [
+                                          ["service_provider", "in", ["SYSTEM"]], 
+                                          ["extension_code", "not like", "%Test%"],
+                                          ["extension_code", "not like", "%TEST%"]
+                                        ]},
 ]
 
 
@@ -235,7 +246,7 @@ permission_query_conditions = {
 # ]
 
 # Automatically update python controller files with type annotations for this app.
-# export_python_type_annotations = True
+export_python_type_annotations = True
 
 # default_log_clearing_doctypes = {
 # 	"Logging DocType Name": 30  # days to retain logs

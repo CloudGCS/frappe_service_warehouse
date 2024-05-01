@@ -1,31 +1,44 @@
 [
-    {
-     "_liked_by": "[]",
-     "amended_from": null,
-     "code_name": "Base",
-     "description": null,
-     "docstatus": 1,
-     "doctype": "Service Packet",
-     "is_system_packet": 1,
-     "is_seed_data": 1,
-     "latest_release": "SYSTEM_Base_v0.1",
-     "modified": "2024-04-16 10:01:57.393654",
-     "name": "SYSTEM_Base",
-     "service_provider": "SYSTEM",
-     "title": "Remote Piloting"
-    },
-    {
-     "amended_from": null,
-     "code_name": "Gauge",
-     "description": null,
-     "docstatus": 1,
-     "doctype": "Service Packet",
-     "is_system_packet": 1,
-     "is_seed_data": 1,
-     "latest_release": "SYSTEM_Gauge_v0.1",
-     "modified": "2024-04-16 10:01:27.716916",
-     "name": "SYSTEM_Gauge",
-     "service_provider": "SYSTEM",
-     "title": "Gauges"
-    }
-   ]
+ {
+  "amended_from": null,
+  "code_name": "Base",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Service Packet",
+  "is_seed_data": 1,
+  "is_system_packet": 1,
+  "latest_release": "SYSTEM_Base_v0.1",
+  "modified": "2024-04-26 03:01:06.112781",
+  "name": "SYSTEM_Base",
+  "service_provider": "SYSTEM",
+  "title": "Remote Piloting"
+ },
+ {
+  "amended_from": null,
+  "code_name": "Gauge",
+  "description": null,
+  "docstatus": 1,
+  "doctype": "Service Packet",
+  "is_seed_data": 1,
+  "is_system_packet": 1,
+  "latest_release": "SYSTEM_Gauge_v0.1",
+  "modified": "2024-04-26 03:01:06.276435",
+  "name": "SYSTEM_Gauge",
+  "service_provider": "SYSTEM",
+  "title": "Gauges"
+ },
+ {
+  "amended_from": null,
+  "code_name": "BuildInApps",
+  "description": "This packet contains required web applications to manage Ground Control System",
+  "docstatus": 1,
+  "doctype": "Service Packet",
+  "is_seed_data": 1,
+  "is_system_packet": 1,
+  "latest_release": "SYSTEM_BuildInApps_v1.0",
+  "modified": "2024-05-01 15:20:03.392197",
+  "name": "SYSTEM_BuildInApps",
+  "service_provider": "SYSTEM",
+  "title": "Build in Web Applications"
+ }
+]
