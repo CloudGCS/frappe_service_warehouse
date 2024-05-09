@@ -45,7 +45,7 @@ class ServicePacketVersion(Document):
     else:
       packet_doc = frappe.get_doc("Service Packet", self.service_packet)
       if packet_doc.is_seed_data:
-        frappe.db.set_value("Service Packet", self.service_packet, "is_seed_data", 1)	
+        frappe.db.set_value("Service Packet Version", self.name, "is_seed_data", 1)	
           
 
   def on_submit(self):

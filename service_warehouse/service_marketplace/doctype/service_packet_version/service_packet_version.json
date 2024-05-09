@@ -70,7 +70,6 @@
   },
   {
    "default": "0",
-   "fetch_from": "service_packet.is_seed_data",
    "fieldname": "is_seed_data",
    "fieldtype": "Check",
    "hidden": 1,
@@ -81,7 +80,7 @@
  "index_web_pages_for_search": 1,
  "is_submittable": 1,
  "links": [],
- "modified": "2024-05-02 00:42:57.753413",
+ "modified": "2024-05-10 02:33:50.755712",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Packet Version",

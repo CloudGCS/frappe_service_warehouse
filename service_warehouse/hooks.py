@@ -20,7 +20,8 @@ fixtures = [
   {"dt": "Service Packet Version", "filters": [
                                                 ["service_packet", "like", "SYSTEM_%"],
                                                 ["is_seed_data", "=", 1],
-                                                ["docstatus", "=", 1]
+                                                ["docstatus", "=", 1],
+                                                ["major", "!=", 999]
                                               ]},
   {"dt": "Service Extension", "filters": [
                                           ["service_provider", "in", ["SYSTEM"]], 

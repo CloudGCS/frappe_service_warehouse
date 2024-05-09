@@ -62,6 +62,7 @@ def get_service_package(packet_release_version):
 			"description": extension_doc.description,
 			"library_name": extension_doc.library_name,
 			"is_background_plugin": extension_doc.is_background_plugin,
+			"is_build_in": extension_doc.is_build_in,
 			"file": extension_doc.file,
 			"config": json.loads(extension_doc.config) if extension_doc.config else {}
 		}

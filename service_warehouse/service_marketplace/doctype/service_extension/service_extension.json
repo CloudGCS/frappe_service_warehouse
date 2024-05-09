@@ -137,7 +137,7 @@
   },
   {
    "default": "0",
-   "description": "This is set true only for frappe apps that are build-in added in docker image. Do not attach file in such case",
+   "description": "This is set true only for frappe apps that are build-in added in docker image. Do not attach file in such case - only set true for the initial version",
    "fieldname": "is_build_in",
    "fieldtype": "Check",
    "hidden": 1,
@@ -147,7 +147,7 @@
  ],
  "index_web_pages_for_search": 1,
  "links": [],
- "modified": "2024-05-02 00:58:48.993219",
+ "modified": "2024-05-03 02:22:41.416586",
  "modified_by": "Administrator",
  "module": "Service Marketplace",
  "name": "Service Extension",
