@@ -25,5 +25,3 @@ class DefaultLayouts(Document):
 def get_default_layouts():
 	default_layouts = frappe.get_all("Default Layouts",fields=["name","platform","viewer","source","layout"] ,filters={"source": "Default"})
 	return default_layouts
-
-
