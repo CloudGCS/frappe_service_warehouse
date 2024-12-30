@@ -2,6 +2,7 @@
 # For license information, please see license.txt
 
 import frappe
+import json
 from frappe.model.document import Document
 
 
@@ -21,7 +22,18 @@ class DefaultLayouts(Document):
 	# end: auto-generated types
 	pass
 
+	def get_layout_as_object(self):
+		layout = json.loads(self.layout)
+		for plugin in layout["backgroundPlugins"]:
+			plugin["config"] = json.dumps(plugin["config"])
+		return layout
+
 @frappe.whitelist()
 def get_default_layouts():
 	default_layouts = frappe.get_all("Default Layouts",fields=["name","platform","viewer","source","layout"] ,filters={"source": "Default"})
 	return default_layouts
+
+@frappe.whitelist()
+def get_default_layout_by_name(name):
+	default_layout = frappe.get_doc("Default Layouts", name)
+	return default_layout.get_layout_as_object()
